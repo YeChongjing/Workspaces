@@ -1,0 +1,30 @@
+package dao.impl;
+
+import java.sql.SQLException;
+
+import dao.BaseDao;
+import dao.UserDao;
+import entity.User;
+
+public class UserDaoImpl extends BaseDao implements UserDao {
+	@Override
+	public void addUser(User user){
+		String sql="insert int USERS(username,password) values(?,?)";
+		setSql(sql);
+		createConnect();
+		try{
+			getpStmt().setString(1,user.getUsername());
+			getpStmt().setString(1,user.getPassword());
+			getpStmt().executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		CloseAll();
+	}
+	public static void main(String[] args){
+		User user=new User();
+		user.setUsername("叶崇京");
+		user.setPassword("201558234021");
+		new UserDaoImpl().addUser(user);
+	}
+}

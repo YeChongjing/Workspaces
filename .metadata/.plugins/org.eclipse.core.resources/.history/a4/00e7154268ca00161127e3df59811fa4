@@ -1,0 +1,23 @@
+package filter;
+
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebInitParam;
+
+import com.sun.org.apache.xalan.internal.xsltc.dom.Filter;
+
+
+@WebFilter(
+		urlPatterns("/index.jsp"),
+		initParams={@WebInitParam(name="count",value="1000")}
+		)
+public class counterFilter implements Filter{
+	public int count;
+	
+	public counterFilter(){
+		
+	}
+	public void destroy(){
+		
+	}
+	public void doFilter()
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.genuitec.eclipse.ast.deploy.core.runonserver">
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_ENCODING" value="UTF-8"/>
+<booleanAttribute key="runonserver.exploded" value="true"/>
+<stringAttribute key="runonserver.project" value="finally"/>
+<stringAttribute key="runonserver.server" value="tomcat7Server"/>
+<booleanAttribute key="runoserver.restart" value="true"/>
+</launchConfiguration>

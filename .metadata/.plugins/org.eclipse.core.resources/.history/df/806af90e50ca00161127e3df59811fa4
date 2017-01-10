@@ -1,0 +1,7 @@
+package com;
+
+import org.jboss.weld.context.SerializableContextualImpl;
+
+public class User extends SerializableContextualImpl<C, I> {
+
+}

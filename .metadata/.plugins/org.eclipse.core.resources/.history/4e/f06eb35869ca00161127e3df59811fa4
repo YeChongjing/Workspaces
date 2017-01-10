@@ -1,0 +1,14 @@
+package filter;
+
+import java.io.IOException;
+import java.nio.file.DirectoryStream.Filter;
+
+public class countFilter implements Filter {
+
+	@Override
+	public boolean accept(Object entry) throws IOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

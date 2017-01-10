@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT users (user)*>
+<!ELEMENT user (uid,name,age,tel,address)>
+<!ELEMENT address (city,street,postcode)>
+<!ELEMENT uid (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT postcode (#PCDATA)>

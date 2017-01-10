@@ -1,0 +1,97 @@
+package dao;
+
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import entity.Student;
+
+public class StudentDao {
+	private static String driver="org.apache.derby.jdbc.ClientDriver";
+	private static String protocol="jdbc:derby://localhost:1527/myeclipse Derby;create=true";
+	public void createStudent(){
+		try {
+			try {
+				Class.forName(driver).newInstance();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return;
+		}
+		try{
+			Connection conn = DriverManager.getConnection(protocol);
+			java.sql.Statement stmt=conn.createStatement();
+			String sql = "CREATE TABLE APP.STUDENT_2(sid INTEGER not null,"+
+			"sname VARCHAR(20),age INTEGER,"+
+			"PRIMARY KEY(sid)		)";
+			stmt.executeUpdate(sql);
+			System.out.println(sql);
+			stmt.close();
+			conn.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args){
+		StudentDao dao=new StudentDao();
+		dao.createStudent();
+		}
+	public class createStudent{
+		private int sid;
+		private String sname;
+		private int sage;
+		public createStudent(){
+			super();
+		}
+		public createStudent(int sid,String sname,int sage){
+			super();
+			this.sid = sid;
+			this.sname = sname;
+			this.sage = sage;
+		}
+		public int getSid() {
+			return sid;
+		}
+		public String getSname() {
+			return sname;
+		}
+		public int getSage() {
+			return sage;
+		}
+		public void add(createStudent student){
+			String sql = "insert into STUDNET values("+
+		student.getSid()+",'"+student.getSname()+"',"+
+		student.getSage()+")";
+			try{
+				Class.forName(driver);
+			}catch(ClassNotFoundException e){
+				e.printStackTrace();
+				return;
+			}
+
+		try{
+			Connection conn = DriverManager.getConnection(protocol);
+			java.sql.Statement stmt=conn.createStatement();
+			stmt.executeUpdate(sql);
+			System.out.println("插入成功");
+			stmt.close();
+			conn.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+	}
+}

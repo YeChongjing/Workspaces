@@ -1,0 +1,7 @@
+package filter;
+
+import java.nio.file.DirectoryStream.Filter;
+
+public class countFilter implements Filter<T> {
+
+}

@@ -1,0 +1,28 @@
+package cn.netjava;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class Controlservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
+		 String pathName =request.getServletPath(); //获得当前servlet路径
+		 System.out.println("pathName:"+pathName);
+		 int index = pathName.indexOf(".");
+		 String ActionName = pathName.substring(1, index);
+		 System.out.println(ActionName); 
+		 String ActionClassName = this.getInitParameter(ActionName);
+		 
+		 String ActionClassName = this.getInitParameter(ActionName);
+	 }
+	public void init() throws ServletException {
+		// Put your code here
+	}
+
+}

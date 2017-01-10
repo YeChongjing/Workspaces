@@ -1,0 +1,63 @@
+package dao.impl;
+
+import java.sql.SQLException;
+import java.sql.ResultSet;
+
+
+import dao.BaseDao;
+import dao.UserDao;
+import entity.User;
+/*
+ * 继承basedao的方法，实现userdao的方法
+ */
+public class UserDaoImpl extends BaseDao implements UserDao {
+	@Override
+	public void addUser(User user){
+		String sql="insert into USERS(username,password) values(?,?)";
+		setSql(sql);
+		createConnect();
+		try{
+			getpStmt().setString(1,user.getUsername());
+			getpStmt().setString(2,user.getPassword());
+			getpStmt().executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		CloseAll();
+	}
+
+	@Override
+	public boolean findUser(User user) {
+		// TODO Auto-generated method stub
+		String sql = "select * from USERS where username=? and password=?";
+		setSql(sql);
+		createConnect();
+		try{
+			getpStmt().setString(1,user.getUsername());
+			getpStmt().setString(2,user.getPassword());
+			ResultSet rSet = getpStmt().executeQuery();
+			if(rSet.next()){
+				return true;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return false;
+	}
+	public static void main(String[] args){
+		User user=new User();
+		user.setUsername("刘智伟");
+		user.setPassword("201558234036");
+		new UserDaoImpl().addUser(user);
+	}
+		/*
+		 *1.先添加到user表中用户   new UserDaoImpl().addUser(user);
+		 *2.选择user实现登录   boolean bool = new UserDaoImpl().findUser(user);
+		 * if(bool){
+		 * 	System.out.println("登录成功");
+		 * }
+		 */
+	
+	
+	
+}

@@ -1,0 +1,7 @@
+package biz.impl;
+
+import dao.UserDao;
+
+public class UserDaoIplmpl extends UserDao {
+
+}

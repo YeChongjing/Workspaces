@@ -1,0 +1,31 @@
+package dao;
+
+
+public class createStudent{
+	private int sid;
+	private String sname;
+	private int sage;
+	public createStudent(){
+		super();
+	}
+	public createStudent(int sid,String sname,int sage){
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.sage = sage;
+	}
+	public int getSid() {
+		return sid;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public int getSage() {
+		return sage;
+	}
+	public void add(createStudent student){
+		String sql = "insert into STUDNET values("+
+	student.getSid()+",'"+student.getSname()+"',"+
+	student.getSage()+")";
+	}
+}

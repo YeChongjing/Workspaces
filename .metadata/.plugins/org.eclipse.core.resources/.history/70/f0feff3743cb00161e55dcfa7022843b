@@ -1,0 +1,6 @@
+package dao;
+
+public class UserDao {
+	public boolean findUser(User user);
+	public void addUser(User user);
+}

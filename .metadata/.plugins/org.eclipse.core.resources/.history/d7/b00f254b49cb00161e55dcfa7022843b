@@ -1,0 +1,13 @@
+package biz.impl;
+
+import dao.UserDao;
+import entity.User;
+import biz.UserBiz;
+
+public class UserBizImpl implements UserBiz{
+	private UserDao userDao = new UserDao();
+	public boolean login(User user){
+		boolean flag = userDao.findUser(user);
+		return flag;
+	}
+}

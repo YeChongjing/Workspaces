@@ -1,0 +1,39 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'counter.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+  </head>
+  
+  <body>
+    <%
+    	Integer hitscount = (Integer)application.getAttribute("hitCounter");
+    	if(hitscount == null || hitscount == 0){
+    		out.println("欢迎访问重庆文理学院官网");
+    		hitscount = 1;
+    	}else{
+    		out.println("欢迎访问重庆文理学院官网");
+    		hitscount =hitscount+1;
+    	}
+    	application.setAttribute("hitCounter",hitscount);
+     %>
+     <p>重庆文理学院访问量：<%=hitscount %><p/>
+  </body>
+</html>

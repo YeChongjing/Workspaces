@@ -1,0 +1,8 @@
+package dao;
+
+public class createStudent {
+	public static void main(String[] arg0){
+	StudentDao dao=new StudentDao();
+	dao.createStudent();
+	}
+}

@@ -1,0 +1,20 @@
+package dao;
+
+
+public class createStudent{
+	private int sid;
+	private String sname;
+	private int sage;
+	public createStudent(){
+		super();
+	}
+	public createStudent(int sid,String sname,int sage){
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.sage = sage;
+	}
+	public void add(createStudent studen){
+		
+	}
+}

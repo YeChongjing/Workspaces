@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user>
+		<uid>1</uid>
+		<name>ycj</name>
+		<age>20</age>
+		<tel>15826309210</tel>
+		<address>
+			<city>永川</city>
+			<street>红河大道</street>
+			<postcode>402160</postcode>
+		</address>
+	</user>
+		<user>
+		<uid>2</uid>
+		<name>ycq</name>
+		<age>22</age>
+		<tel>15826309215</tel>
+		<address>
+			<city>云阳</city>
+			<street>清水</street>
+			<postcode>404500</postcode>
+		</address>
+	</user>
+</users>

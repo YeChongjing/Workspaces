@@ -1,0 +1,11 @@
+package com;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+	private String name;
+	private String nickName;
+	private String password;
+	private int age;
+	private String desc="无知者，知天下。---无知@蜕变";
+}

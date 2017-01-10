@@ -1,0 +1,14 @@
+#Tue Jan 10 13:39:18 CST 2017
+tomcat7Server.finally.contextRoot=/finally
+tomcat7Server.finally.shouldBackup=false
+tomcat7Server.finally.isUptoDate=true
+tomcat7Server.finally.deploymentPath=D\:\\Program Files (x86)\\Apache Tomcat Software\\apache-tomcat-7.0.65\\webapps\\finally
+tomcat7Server.finally.isExploded=true
+tomcat7Server.finally.deployIsOverProject=false
+tomcat7Server.finally.altContextRoot=/finally
+eclipse.preferences.version=1
+tomcat7Server.finally.type=WebDeployment
+tomcat7Server.finally.shouldOverwrite=false
+tomcat7Server.finally.isDeployed=true
+tomcat7Server.finally.noFileCopy=false
+tomcat7Server.finally.IEARProjectName=
